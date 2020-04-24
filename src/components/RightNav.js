@@ -12,6 +12,10 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
     paper: {
+        display: "none",
+        [theme.breakpoints.up("md")]: {
+            display: "flex",
+        },
         padding: theme.spacing(2),
         textAlign: "left",
         height: "100%",
@@ -19,10 +23,6 @@ const useStyles = makeStyles(theme => ({
         flexDirection: "column",
         alignItems: "center",
         color: theme.palette.text.secondary,
-        display: "none",
-        [theme.breakpoints.up("md")]: {
-            display: "flex",
-        }
     },
     btmBtn:{
         position: "absolute",
